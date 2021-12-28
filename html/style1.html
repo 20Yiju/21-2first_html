@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style1_yiju</title>
+    <style>
+        body {
+            font: 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }
+        #top {
+            background-color: #04AA6D;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 4px;
+        }
+        #menubar {
+            width: 200px;
+            float: left;
+        }
+        li {
+            display: list-item;
+        }
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+        .menuitem:first-child {
+            background-color: #04AA6D;
+            color: white;
+            font-weight: bold;
+        }
+        .menuitem {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            list-style-type: none;
+            padding: 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 4px;
+        }
+        #menulist {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        #main {
+            padding: 10px;
+            margin-right: 0;
+            text-align: left;
+        }
+        #sidebar {
+            background-color: #32a4e7;
+            color: #ffffff;
+            padding: 10px;
+            width: 180px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            width: auto;
+        }
+        #sidebar {
+            border-radius: 4px;
+            margin: 4px;
+        }
+        div {
+            display: block;
+        }
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        a {
+            color: #000000 !important;
+            text-decoration: underline;
+        }
+        a:-webkit-any-link {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        
+        #bottom {
+            border: 1px solid #d4d4d4;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+            border-radius: 4px;
+            margin: 4px;
+        }
+        h3 {
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        .grid-containcer {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id = 'container'>
+        <div id = 'top'>
+            <h1>Welcome to My Homepage</h1>
+            <p>Use the menu to select different Stylesheets</p>
+        </div>
+        <div id = 'contents' class = "grid-containcer"> 
+            <div id = 'menubar'>
+                <ul id = 'menulist'>
+                    <li class = 'menuitem' onclick = "reStyle(0)"> Stylesheet 1</li>
+                    <li class = 'menuitem' onclick = "reStyle(1)"> Stylesheet 2 </li>
+                    <li class = 'menuitem' onclick = "reStyle(2)"> Stylesheet 3 </li>
+                    <li class = 'menuitem' onclick = "reStyle(3)"> Stylesheet 4 </li>
+                    <li class = 'menuitem' onclick = "noStyles()"> No Stylesheet </li>
+                </ul>
+            </div>
+            <div id = 'main'>
+                <h1>Same Page Different Stylesheets</h1>
+                <p>
+                    This is a demonstration of how different stylesheets can change the 
+                    layout of your HTML page.<br>
+                    You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of 
+                    the following links:
+                    <br>
+                    <a href="./style1.html" onclick="reStyle(0);return false">Stylesheet1</a>
+                    , 
+                    <a href="#" onclick="reStyle(1);return false">Stylesheet2</a>
+                    , 
+                    <a href="#" onclick="reStyle(2);return false">Stylesheet3</a>
+                    , 
+                    <a href="#" onclick="reStyle(3);return false">Stylesheet4</a>
+                    .
+                </p>
+                <h2>No Styles</h2>
+                <p>This page uses DIV elements to group different sections of the HTML page. 
+                    Click here to see how the page looks like with no stylesheet:
+                    <br>
+                    <a href="./nostyle.html" onclick="noStyles();return false">No Stylesheet</a>
+                    .
+                </p>
+            </div>
+            <div id = 'sidebar'>
+                <h3>Side-Bar</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+        </div>
+        <div id = 'bottom'>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl 
+            ut aliquip ex ea commodo consequat.<br> 
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit 
+            praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </div>
+    </div>
+    <script>
+        function noStyles() {
+            document.styleSheets[0].disabled = true;
+            document.styleSheets[1].disabled = true;
+            document.styleSheets[2].disabled = true;
+            document.styleSheets[3].disabled = true;
+        }
+        function reStyle(n) {
+            document.styleSheets[n].disabled = false;
+        }
+        function closeBlackdiv() {
+            var blackdiv, stylediv;
+            blackdiv = document.getElementById("blackdiv");
+            blackdiv.parentNode.removeChild(blackdiv);
+            stylediv = document.getElementById("stylediv");
+            stylediv.parentNode.removeChild(stylediv);
+        }
+        function showStyle(n) {
+            var div, text, blackdiv;
+            blackdiv = document.createElement("DIV");
+            blackdiv.setAttribute("style", "background-color: #000000;position: absolute;width: 100%;top: 0; opacity: 0.5;margin-left: -20px;");
+            blackdiv.setAttribute("id", "blackdiv");
+            blackdiv.setAttribute("onclick", "closeBlackdiv()");
+            document.body.appendChild(blackdiv);
+            div = document.createElement("DIV");
+            div.setAttribute("id", "stylediv");
+            div.setAttribute("style", "background-color: #ffffff;padding-left: 5px;position: absolute;width: auto;height: auto;top: 100px;bottom: 50px;left: 200px;right: 200px;overflow: auto;font-family: monospace;white-space: pre;line-height: 16px;");
+            text = document.createTextNode(document.getElementsByTagName("STYLE")[n].innerHTML);
+            div.appendChild(text);
+            document.body.appendChild(div);
+        } 
+    </script>
+</body>
+</html>

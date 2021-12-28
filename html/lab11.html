@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Who am I🙋🏻‍♀️</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: rgb(255, 231, 231);
+      padding: 25px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    p1 {
+      font-size: 16px;
+    }
+    .jumbotron .h1, .jumbotron h1 {
+      color: rgb(252, 170, 170); 
+    }
+
+    #bust {
+      border: 2.5px solid rgb(255, 195, 195); 
+      background-color: rgba(0,0,0,0); 
+      color: rgb(255, 195, 195); 
+      padding: 5px;
+      border-radius: 5px;
+    }
+    #nav {
+      background-color: rgb(255, 231, 231);
+    }
+
+    .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+      color: #fff;
+      background-color: rgb(255, 195, 195);
+    }
+    .navbar-inverse {
+      border-color: rgb(255, 195, 195);
+    }
+    .jumbotron {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      color: inherit;
+      background-color: rgba(250, 239, 228, 0.836);
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" id = "nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="#" >Home</a></li>
+        <li><a onclick="alert('[About]아직 준비가 되지 않았습니다.. 조금만 기다려 주세요🙇🏻‍♀️')">About</a></li>
+        <li><a onclick="alert('[Contact]아직 준비가 되지 않았습니다.. 조금만 기다려 주세요🙇🏻‍♀️')">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a onclick="alert('[Login]아직 준비가 되지 않았습니다.. 조금만 기다려 주세요🙇🏻‍♀️')"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron"  id = "bg">
+  <div class="container text-center">
+    <h1>My Profile~!</h1> <br>
+    <button type = "button" class="bgchange" id = "bust" onclick="colorChange()">Click here!</button>     
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Who am I</h3><br>
+  <div class="row">
+    <div class="col-sm-3"> 
+        <p1>I'm attending <br> Handong Global University🏫</p1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGuJt6NMQs17H6nhx7qwoWCOto_Z-OXGr3fl_ma5MxRQRfuEDWh49rQzbO7SCSyLTnXy4&usqp=CAU" 
+        class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+        <p1>My major is Computer Science👩🏻‍💻</p1>
+        <img src="data:image/png;base64,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"
+        class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p1>My favorite animal is dog🐶</p1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJfmnMKPsEJqW9tRqvqooIgsGdsDTbkjG-tw&usqp=CAU" 
+      style="width:100%" alt="Image">
+    </div>
+
+
+    <div class="col-sm-3">
+      <p1>I like sweat things🍩</p1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTz-NL81uHsDJDUmnMcZ2Wm_MTwdfKXpuLUg&usqp=CAU" 
+      style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+
+<footer class="container-fluid text-center">
+  <p>Thank You for Visiting my Website ◡̈</p>
+</footer>
+
+
+<script>
+  function colorChange() {
+    var color = "#";
+    var colorlist = ["c8e6f8", "c8f8da", "e6c8f8", "f5f8c8", "c8f8e4", "FAEFE4"]
+    color += colorlist[Math.floor(Math.random() * colorlist.length)];
+    document.getElementById("bg").style.background = color;    
+
+  }
+</script>
+
+</body>
+</html>
